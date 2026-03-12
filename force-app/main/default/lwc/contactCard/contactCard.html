@@ -1,0 +1,35 @@
+<template>
+    <!-- Show error if data fails to load -->
+    <template if:true={hasError}>
+        <p>Error loading contact.</p>
+    </template>
+
+    <!-- Show card when data is loaded -->
+    <template if:true={contact.data}>
+        <lightning-card title="Contact Details" icon-name="standard:contact">
+            <div class="slds-p-around_medium">
+
+                <div class="slds-m-bottom_small">
+                    <span class="slds-text-title_bold">👤 Name: </span>
+                    <span>{name}</span>
+                </div>
+
+                <div class="slds-m-bottom_small">
+                    <span class="slds-text-title_bold">📧 Email: </span>
+                    <span>{email}</span>
+                </div>
+
+                <div class="slds-m-bottom_small">
+                    <span class="slds-text-title_bold">📞 Phone: </span>
+                    <span>{phone}</span>
+                </div>
+
+                <div class="slds-m-bottom_small">
+                    <span class="slds-text-title_bold">🏢 Account: </span>
+                    <span>{accountName}</span>
+                </div>
+
+            </div>
+        </lightning-card>
+    </template>
+</template>
